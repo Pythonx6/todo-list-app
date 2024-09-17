@@ -1,0 +1,139 @@
+/* Estilo general del contenedor principal */
+.todo-list-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #49b1f2, #2575fc);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  color: #0f0808;
+}
+
+/* Ajustes para evitar desbordamientos horizontales en dispositivos pequeños */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Contenedor para centrar el contenido principal */
+.content-wrapper {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Contenedor del campo de entrada y botón */
+.input-container {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Estilo del campo de entrada de la nueva tarea */
+.add-task-input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Estilo del botón para añadir una nueva tarea */
+.add-task-button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #6fe25d;
+  color: #0d0a0a;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo de las áreas dropeables (las tablas) */
+.droppable-area {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  min-height: 150px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los elementos arrastrables */
+.draggable-item {
+  padding: 8px;
+  margin: 4px 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+/* Contenedor interno para el contenido de la tarea y los botones */
+.draggable-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Estilo del campo de texto dentro de los elementos arrastrables */
+.draggable-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  outline: none;
+}
+
+/* Estilo del botón de completar tarea */
+.toggle-complete {
+  padding: 4px 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilo cuando la tarea está completada */
+.toggle-complete.completed {
+  background-color: #ff4d4d;
+  color: #fbfbfb;
+}
+
+/* Estilo cuando la tarea no está completada */
+.toggle-complete:not(.completed) {
+  background-color: #4dff4d;
+  color: #fff;
+}
+
+/* Título de la sección de tareas completadas */
+.completed-title {
+  margin-top: 20px;
+}
+
+/* Estilo del botón de editar tarea */
+.edit-button {
+  padding: 4px 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #ffce00;
+  color: #fff;
+  margin-left: 8px;
+}
